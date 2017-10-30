@@ -58,7 +58,7 @@ def macd(prices, fast=12, slow=26, signal=9, m=2.0):
     return diff2, dea2, bar2
 
 if __name__ == '__main__':
-    data = ts.get_k_data('399300', start='2016-01-01')
+    data = ts.get_k_data('399300', start='2015-01-01')
     print data
 #     print hd['close'].values
 #     print hd['close'][-2]
@@ -85,12 +85,13 @@ if __name__ == '__main__':
 #     ax2 = fig.add_subplot(2,1,2, sharex=ax)
 #     ax.bar(data['date'], macd > 0, color='red')
 #     ax.bar(data['date'], macd < 0, color='green')
-    ax.bar(data['date'], macd, width=0.4, ecolor=['red', 'green'])
+    ax.bar(data['date'], macd, width=0.4, ecolor=['red', 'green'], color='red')
 #     ax2.set_xticks(range(0, len(data['date']), 10))
 #       
 #     ax2.set_xticklabels(data['date'][::10], rotation=45)    
      
     print macd[-1], diff[-1], dea[-1]
+    print macd[-5], diff[-5], dea[-5]
       
 #     mpf.candlestick2_ochl(ax, data['open'], data['close'], data['high'], data['low'],
 #                      width=0.5, colorup='r', colordown='green',
