@@ -13,6 +13,8 @@ import numpy as np
 if __name__ == '__main__':
     c,v = np.loadtxt('data.csv', delimiter=',', usecols=(6,7), unpack=True)
     
+    print c
+    print v
     #VWAP（Volume-Weighted Average Price，成交量加权平均价格）是一个非常重要的经济学量，
     #它代表着金融资产的“平均”价格。某个价格的成交量越高，该价格所占的权重就越大。VWAP
     #就是以成交量为权重计算出来的加权平均值，常用于算法交易。
